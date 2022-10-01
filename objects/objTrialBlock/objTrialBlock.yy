@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "objTrialBlock",
-  "spriteId": null,
+  "spriteId": {
+    "name": "Sprite1",
+    "path": "sprites/Sprite1/Sprite1.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
