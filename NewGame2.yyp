@@ -4,6 +4,7 @@
   "name": "NewGame2",
   "resources": [
     {"id":{"name":"old","path":"objects/old/old.yy",},"order":0,},
+    {"id":{"name":"old2","path":"objects/old2/old2.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
