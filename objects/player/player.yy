@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "old3",
+  "name": "player",
   "spriteId": null,
   "solid": false,
   "visible": true,
