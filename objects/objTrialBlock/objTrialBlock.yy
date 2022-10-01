@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "objTrialBlock",
   "spriteId": {
-    "name": "Sprite1",
-    "path": "sprites/Sprite1/Sprite1.yy",
+    "name": "sprBlock",
+    "path": "sprites/sprBlock/sprBlock.yy",
   },
   "solid": false,
   "visible": true,

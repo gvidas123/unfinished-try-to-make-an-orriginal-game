@@ -4,7 +4,8 @@
   "name": "NewGame2",
   "resources": [
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},"order":0,},
-    {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},"order":0,},
+    {"id":{"name":"sprPlayer","path":"sprites/sprPlayer/sprPlayer.yy",},"order":0,},
+    {"id":{"name":"sprBlock","path":"sprites/sprBlock/sprBlock.yy",},"order":1,},
     {"id":{"name":"objTrialBlock","path":"objects/objTrialBlock/objTrialBlock.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
