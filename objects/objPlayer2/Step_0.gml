@@ -12,6 +12,8 @@ else {
 
 
 
+vspeed += grav
+
 
 
 

@@ -6,7 +6,7 @@ if (!place_free(x+hspeed,y))
     if(hspeed > 0){move_contact_solid(0,abs(hspeed));}
     hspeed = 0;
 }
- 
+
 if (!place_free(x,y+vspeed))
 {
     if(vspeed <= 0){move_contact_solid(90,abs(vspeed));}
@@ -15,6 +15,10 @@ if (!place_free(x,y+vspeed))
 }
 
 if (!place_free(x+hspeed,y+vspeed)) {hspeed = 0;}
+
+if (keyboard_check(vk_space)) {
+	vspeed = -15
+}
 
 
 
