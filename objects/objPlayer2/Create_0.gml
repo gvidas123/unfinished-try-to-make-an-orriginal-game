@@ -3,6 +3,7 @@
 vspeed = 5
 hspeed = 0
 momentum = 0
+jumpCooldown = 0
 
 
 
