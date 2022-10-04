@@ -5,10 +5,12 @@
   "resources": [
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},"order":0,},
     {"id":{"name":"objInit","path":"objects/objInit/objInit.yy",},"order":0,},
+    {"id":{"name":"rTrialRoom2","path":"rooms/rTrialRoom2/rTrialRoom2.yy",},"order":2,},
     {"id":{"name":"sprPlayer","path":"sprites/sprPlayer/sprPlayer.yy",},"order":0,},
     {"id":{"name":"sprBlock","path":"sprites/sprBlock/sprBlock.yy",},"order":1,},
     {"id":{"name":"objTrialBlock","path":"objects/objTrialBlock/objTrialBlock.yy",},"order":1,},
     {"id":{"name":"objPlayer2","path":"objects/objPlayer2/objPlayer2.yy",},"order":2,},
+    {"id":{"name":"rTrialRoom3","path":"rooms/rTrialRoom3/rTrialRoom3.yy",},"order":3,},
     {"id":{"name":"rInit","path":"rooms/rInit/rInit.yy",},"order":1,},
     {"id":{"name":"rTrialRoom","path":"rooms/rTrialRoom/rTrialRoom.yy",},"order":0,},
   ],
@@ -25,6 +27,8 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
+    {"roomId":{"name":"rTrialRoom2","path":"rooms/rTrialRoom2/rTrialRoom2.yy",},},
+    {"roomId":{"name":"rTrialRoom3","path":"rooms/rTrialRoom3/rTrialRoom3.yy",},},
     {"roomId":{"name":"rTrialRoom","path":"rooms/rTrialRoom/rTrialRoom.yy",},},
   ],
   "Folders": [
