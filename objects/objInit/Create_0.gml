@@ -8,6 +8,7 @@ global.keyLeft = vk_left;
 global.keyJump = ord("x");
 global.Volume = 1;
 global.acceleration = 1;
+global.zoom = 3;
 room_goto_next();
 
 
