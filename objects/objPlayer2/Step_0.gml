@@ -89,6 +89,12 @@ if (jumpCooldown > 0) {
 	jumpCooldown -= 0.05
 }
 
+if (keyboard_check_pressed(global.keySkill_1)) {
+	
+	insObjHitArea = instance_create_depth(x, y, 0, objHitArea);
+	alarm[0] = 2
+}
+
 
 if (keyboard_check(global.keyRight)) {
 	//hspeed = 5

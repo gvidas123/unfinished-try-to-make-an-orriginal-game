@@ -6,9 +6,10 @@ global.keyUp = vk_up;
 global.keyRight = vk_right;
 global.keyLeft = vk_left;
 global.keyJump = ord("x");
-global.Volume = 1;
+global.volume = 1;
 global.acceleration = 1;
-global.zoom = 3;
+global.zoom = 5;
+global.keySkill_1 = ord("Z")
 room_goto_next();
 
 
