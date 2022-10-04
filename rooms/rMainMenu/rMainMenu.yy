@@ -1,7 +1,7 @@
 {
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
-  "name": "rMenu",
+  "name": "rMainMenu",
   "isDnd": false,
   "volume": 1.0,
   "parentRoom": null,
@@ -25,7 +25,7 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_2967615F","path":"rooms/rMenu/rMenu.yy",},
+    {"name":"inst_2967615F","path":"rooms/rMainMenu/rMainMenu.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

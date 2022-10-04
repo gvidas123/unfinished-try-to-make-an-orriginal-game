@@ -13,7 +13,9 @@ if (keyboard_check_pressed(global.keyDown)) {
 if (keyboard_check_pressed(vk_enter) && selected = 0) {
 	room_goto(rStartingRoom);
 }
-if ()
+if (keyboard_check_pressed(vk_enter) && selected = 1) {
+	room_goto(rOptions);
+}
 
 
 
