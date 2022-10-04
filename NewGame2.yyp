@@ -12,6 +12,7 @@
     {"id":{"name":"sprBlock","path":"sprites/sprBlock/sprBlock.yy",},"order":1,},
     {"id":{"name":"fontMainMenu","path":"fonts/fontMainMenu/fontMainMenu.yy",},"order":0,},
     {"id":{"name":"objTrialBlock","path":"objects/objTrialBlock/objTrialBlock.yy",},"order":1,},
+    {"id":{"name":"sprDestroyableBlock","path":"sprites/sprDestroyableBlock/sprDestroyableBlock.yy",},"order":3,},
     {"id":{"name":"objOpttionManager","path":"objects/objOpttionManager/objOpttionManager.yy",},"order":1,},
     {"id":{"name":"objDisplayInit","path":"objects/objDisplayInit/objDisplayInit.yy",},"order":1,},
     {"id":{"name":"objPlayer2","path":"objects/objPlayer2/objPlayer2.yy",},"order":2,},
