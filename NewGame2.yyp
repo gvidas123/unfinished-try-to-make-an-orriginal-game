@@ -6,6 +6,7 @@
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},"order":0,},
     {"id":{"name":"rOptions","path":"rooms/rOptions/rOptions.yy",},"order":4,},
     {"id":{"name":"objInit","path":"objects/objInit/objInit.yy",},"order":0,},
+    {"id":{"name":"rTrialRoom2","path":"rooms/rTrialRoom2/rTrialRoom2.yy",},"order":2,},
     {"id":{"name":"sprPlayer","path":"sprites/sprPlayer/sprPlayer.yy",},"order":0,},
     {"id":{"name":"rStartingRoom","path":"rooms/rStartingRoom/rStartingRoom.yy",},"order":3,},
     {"id":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},"order":2,},
@@ -15,6 +16,7 @@
     {"id":{"name":"objOpttionManager","path":"objects/objOpttionManager/objOpttionManager.yy",},"order":1,},
     {"id":{"name":"objDisplayInit","path":"objects/objDisplayInit/objDisplayInit.yy",},"order":1,},
     {"id":{"name":"objPlayer2","path":"objects/objPlayer2/objPlayer2.yy",},"order":2,},
+    {"id":{"name":"rTrialRoom3","path":"rooms/rTrialRoom3/rTrialRoom3.yy",},"order":3,},
     {"id":{"name":"rInit","path":"rooms/rInit/rInit.yy",},"order":1,},
     {"id":{"name":"objMainMenu","path":"objects/objMainMenu/objMainMenu.yy",},"order":0,},
     {"id":{"name":"rTrialRoom","path":"rooms/rTrialRoom/rTrialRoom.yy",},"order":0,},
@@ -33,6 +35,8 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
     {"roomId":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},},
+    {"roomId":{"name":"rTrialRoom2","path":"rooms/rTrialRoom2/rTrialRoom2.yy",},},
+    {"roomId":{"name":"rTrialRoom3","path":"rooms/rTrialRoom3/rTrialRoom3.yy",},},
     {"roomId":{"name":"rTrialRoom","path":"rooms/rTrialRoom/rTrialRoom.yy",},},
     {"roomId":{"name":"rStartingRoom","path":"rooms/rStartingRoom/rStartingRoom.yy",},},
     {"roomId":{"name":"rOptions","path":"rooms/rOptions/rOptions.yy",},},
@@ -44,7 +48,9 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Notes","folderPath":"folders/Notes.yy","order":13,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy","order":9,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"initialise","folderPath":"folders/Objects/initialise.yy","order":4,},
+
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"menu","folderPath":"folders/Objects/menu.yy","order":5,},
+
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Paths","folderPath":"folders/Paths.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rooms","folderPath":"folders/Rooms.yy","order":10,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Scripts.yy","order":5,},
