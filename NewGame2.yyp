@@ -35,10 +35,10 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
     {"roomId":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},},
+    {"roomId":{"name":"rStartingRoom","path":"rooms/rStartingRoom/rStartingRoom.yy",},},
+    {"roomId":{"name":"rTrialRoom","path":"rooms/rTrialRoom/rTrialRoom.yy",},},
     {"roomId":{"name":"rTrialRoom2","path":"rooms/rTrialRoom2/rTrialRoom2.yy",},},
     {"roomId":{"name":"rTrialRoom3","path":"rooms/rTrialRoom3/rTrialRoom3.yy",},},
-    {"roomId":{"name":"rTrialRoom","path":"rooms/rTrialRoom/rTrialRoom.yy",},},
-    {"roomId":{"name":"rStartingRoom","path":"rooms/rStartingRoom/rStartingRoom.yy",},},
     {"roomId":{"name":"rOptions","path":"rooms/rOptions/rOptions.yy",},},
   ],
   "Folders": [
