@@ -10,8 +10,8 @@ canAirActivate = false
 image_xscale = 0.75;
 image_yscale = 0.75;
 
-dashLength = 8;
-dashStrength = 10;
+dashLength = 5;
+dashStrength = 15;
 dashCooldown = 0
 yDashOffset = 0;
 xDashOffset = 0;

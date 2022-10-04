@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-canAirActivate = true;
+if (dashCooldown == 0) {
+	canAirActivate = true;
+}
 
 if (keyboard_check(ord("X")) && jumpCooldown == 0) {
 	vspeed = -18
