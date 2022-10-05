@@ -4,7 +4,7 @@ if (dashCooldown == 0) {
 	canAirActivate = true;
 }
 
-if (keyboard_check(ord("X")) && jumpCooldown == 0) {
+if (keyboard_check(global.keyJump) && jumpCooldown == 0) {
 	vspeed = -18
 	jumpCooldown = 1
 }
@@ -18,11 +18,11 @@ if (!place_free(x+hspeed,y))
 
 if (!place_free(x,y+vspeed))
 {
-    if(vspeed <= 0){
+    if(vspeed <= 0) {
 		move_contact_solid(90,abs(vspeed))
 		show_debug_message(vspeed)
 	}
-    if(vspeed > 0){
+    if(vspeed > 0) {
 		move_contact_solid(270,abs(vspeed))
 	}
     vspeed = 0;
