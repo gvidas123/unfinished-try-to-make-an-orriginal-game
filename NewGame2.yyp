@@ -18,6 +18,7 @@
     {"id":{"name":"objDisplayInit","path":"objects/objDisplayInit/objDisplayInit.yy",},"order":1,},
     {"id":{"name":"objPlayer2","path":"objects/objPlayer2/objPlayer2.yy",},"order":2,},
     {"id":{"name":"rTrialRoom3","path":"rooms/rTrialRoom3/rTrialRoom3.yy",},"order":3,},
+    {"id":{"name":"dummyRoom","path":"rooms/dummyRoom/dummyRoom.yy",},"order":5,},
     {"id":{"name":"objDestroyableBlock","path":"objects/objDestroyableBlock/objDestroyableBlock.yy",},"order":6,},
     {"id":{"name":"rInit","path":"rooms/rInit/rInit.yy",},"order":1,},
     {"id":{"name":"objHitArea","path":"objects/objHitArea/objHitArea.yy",},"order":7,},
@@ -42,6 +43,7 @@
     {"roomId":{"name":"rTrialRoom3","path":"rooms/rTrialRoom3/rTrialRoom3.yy",},},
     {"roomId":{"name":"rStartingRoom","path":"rooms/rStartingRoom/rStartingRoom.yy",},},
     {"roomId":{"name":"rOptions","path":"rooms/rOptions/rOptions.yy",},},
+    {"roomId":{"name":"dummyRoom","path":"rooms/dummyRoom/dummyRoom.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},

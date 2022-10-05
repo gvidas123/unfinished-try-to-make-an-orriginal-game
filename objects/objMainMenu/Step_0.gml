@@ -10,10 +10,10 @@ if (keyboard_check_pressed(global.keyDown)) {
 		selected++;
 	}
 }
-if (keyboard_check_pressed(vk_enter) && selected = 0) {
+if (keyboard_check_pressed(vk_enter) && selected == 0) {
 	room_goto(rTrialRoom2);
 }
-if (keyboard_check_pressed(vk_enter) && selected = 1) {
+if (keyboard_check_pressed(vk_enter) && selected == 1) {
 	room_goto(rOptions);
 }
 
