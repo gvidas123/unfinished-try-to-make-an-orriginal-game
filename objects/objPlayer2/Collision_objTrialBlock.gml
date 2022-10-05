@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+
+
 if (dashCooldown == 0) {
 	canAirActivate = true;
 }
@@ -9,8 +13,7 @@ if (keyboard_check(global.keyJump) && jumpCooldown == 0) {
 	jumpCooldown = 1
 }
 
-if (!place_free(x+hspeed,y))
-{
+if (!place_free(x+hspeed,y)) {
     if(hspeed <= 0){move_contact_solid(180,abs(hspeed));}
     if(hspeed > 0){move_contact_solid(0,abs(hspeed));}
     hspeed = 0;

@@ -21,3 +21,5 @@ else {
 	draw_text_color(100,162,"Exit",c_yellow,c_yellow,c_yellow,c_yellow,1);
 }
 
+
+

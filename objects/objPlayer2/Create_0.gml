@@ -15,3 +15,5 @@ image_yscale = 0.75;
 dashLength = 5; //How many frames the dash happens for
 dashStrength = 15; //How many pixels you are moved per frame
 
+
+

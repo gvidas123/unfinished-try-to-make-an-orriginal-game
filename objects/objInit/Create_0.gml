@@ -10,6 +10,9 @@ global.volume = 1;
 global.acceleration = 1;
 global.zoom = 5;
 global.keySkill_1 = ord("Z")
+
+
+
 room_goto_next();
 
 
