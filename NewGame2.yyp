@@ -17,7 +17,6 @@
     {"id":{"name":"fontMainMenu","path":"fonts/fontMainMenu/fontMainMenu.yy",},"order":0,},
     {"id":{"name":"objTrialBlock","path":"objects/objTrialBlock/objTrialBlock.yy",},"order":2,},
     {"id":{"name":"sprDestroyableBlock","path":"sprites/sprDestroyableBlock/sprDestroyableBlock.yy",},"order":3,},
-    {"id":{"name":"scrGenSquarePattern","path":"scripts/scrGenSquarePattern/scrGenSquarePattern.yy",},"order":0,},
     {"id":{"name":"objOpttionManager","path":"objects/objOpttionManager/objOpttionManager.yy",},"order":1,},
     {"id":{"name":"objDoor","path":"objects/objDoor/objDoor.yy",},"order":0,},
     {"id":{"name":"objDisplayInit","path":"objects/objDisplayInit/objDisplayInit.yy",},"order":1,},
