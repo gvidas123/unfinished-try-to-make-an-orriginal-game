@@ -1,13 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objDoor",
+  "name": "objHitDoor",
   "spriteId": {
-    "name": "Sprite5",
-    "path": "sprites/Sprite5/Sprite5.yy",
+    "name": "sprCircleOfCollision",
+    "path": "sprites/sprCircleOfCollision/sprCircleOfCollision.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -24,13 +24,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"objHitDoor","path":"objects/objHitDoor/objHitDoor.yy",},},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "building blocks",
-    "path": "folders/Objects/building blocks.yy",
+    "name": "collision objects",
+    "path": "folders/Objects/collision objects.yy",
   },
 }
