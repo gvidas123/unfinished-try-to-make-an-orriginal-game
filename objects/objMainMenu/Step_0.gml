@@ -11,7 +11,7 @@ if (keyboard_check_pressed(global.keyDown)) {
 	}
 }
 if (keyboard_check_pressed(vk_enter) && selected = 0) {
-	room_goto(rTrialRoom2);
+	room_goto(rStartingRoom);
 }
 if (keyboard_check_pressed(vk_enter) && selected = 1) {
 	room_goto(rOptions);
