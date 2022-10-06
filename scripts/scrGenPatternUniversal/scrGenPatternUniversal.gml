@@ -2,9 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scrGenPatternUniversal(xOrigin,yOrigin,grid,map,tileS,layerId) {
 	show_debug_message("as");
-	xOrigin -= (tileS/2);
-	yOrigin -= (tileS/2);
+	xOrigin += (tileS/2);
+	yOrigin += (tileS/2);
 	var variable0 = 0;
+	
 	repeat(ds_grid_width(grid)){
 		var variable1 = 0;
 		repeat(ds_grid_height(grid)) {
@@ -13,8 +14,10 @@ function scrGenPatternUniversal(xOrigin,yOrigin,grid,map,tileS,layerId) {
 			if (tile != "0") {
 				instance_create_layer(xOrigin + (tileS*variable0),yOrigin + (tileS*variable1),layerId,map[? tile]);
 			}
+			
 			variable1++;
 		}
+		show_debug_message(variable0);
 		variable0++;
 	}
 }
