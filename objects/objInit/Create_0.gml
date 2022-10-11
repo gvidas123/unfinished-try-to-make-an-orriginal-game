@@ -11,9 +11,11 @@ global.acceleration = 1;
 global.zoom = 5;
 global.keySkill_1 = ord("Z")
 global.keyDoor = vk_up;
+global.tileSize = 64;
 global.tileValues = ds_map_create();
 ds_map_add(global.tileValues,"1",objTrialBlock);
-global.tileValues[? "2"] = objDoor;
+ds_map_add(global.tileValues,"2",objDoor);
+ds_map_add(global.tileValues,"3",objPlayer2);
 global.generationGrid = load_csv("testPattern.csv")
 room_goto_next();
 
