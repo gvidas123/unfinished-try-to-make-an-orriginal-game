@@ -52,11 +52,11 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
     {"roomId":{"name":"rTrialGenRoom","path":"rooms/rTrialGenRoom/rTrialGenRoom.yy",},},
+    {"roomId":{"name":"rRandomPointGen","path":"rooms/rRandomPointGen/rRandomPointGen.yy",},},
     {"roomId":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},},
     {"roomId":{"name":"rStartingRoom","path":"rooms/rStartingRoom/rStartingRoom.yy",},},
     {"roomId":{"name":"rTrialRoom2","path":"rooms/rTrialRoom2/rTrialRoom2.yy",},},
     {"roomId":{"name":"rOptions","path":"rooms/rOptions/rOptions.yy",},},
-    {"roomId":{"name":"rRandomPointGen","path":"rooms/rRandomPointGen/rRandomPointGen.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},

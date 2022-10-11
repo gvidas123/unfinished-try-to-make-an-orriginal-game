@@ -5,12 +5,16 @@
 
 //Speed decreasing over time
 {
-	if (hspeed >= 10) {
-		hspeed -= 1;
+	if (abs(hspeed) >= 10) {
+		hspeed /= 1.01;
 	}
+	if (abs(hspeed) >= 50) {
+		hspeed /= 1.5;
+	}
+	/*
 	else if (hspeed <= -10) {
 		hspeed += 1;
-	}
+	}*/
 	vspeed += global.grav
 	if (jumpCooldown > 0) {
 		jumpCooldown -= 0.05
@@ -21,7 +25,7 @@ if (ability1Cooldown > 0) {
 	ability1Cooldown--;
 }
 
-abilityName1 = "dash"
+
 
 
 if (keyboard_check(global.keySkill_1) && ability1Cooldown == 0) {
@@ -45,7 +49,7 @@ if (ability1StepLength > 0) {
 				ability1EndEnable = true
 			}
 			ability1StepLength--;
-			scrDashStep(functionData)
+			functionData = scrDashStep(functionData)
 			break;
 	}	
 }
@@ -63,38 +67,6 @@ if (ability1EndEnable == true) {
 
 
 
-//Dash
-{
-	if (dashCooldown > 0) {
-		dashCooldown--;
-	}
-	/*
-	while (dashLength > 1) {
-		vspeed = 0;
-		hspeed = 0;
-		dashLength--;
-		y += yDashOffset;
-		x += xDashOffset;
-		return;
-	}
-	if (dashLength == 1) {
-		vspeed += yDashOffset;
-		hspeed += xDashOffset;
-		dashLength--;
-	}*/
-	
-	/*
-	if (canAirActivate == true) {
-		if (keyboard_check(global.keySkill_1)) {
-			if (dashCooldown == 0) {
-				dashCooldown = 30
-				canAirActivate = false;
-				scrDashCheck(dashStrength, dashLength)
-			}
-			
-		}
-	}*/
-}
 
 //Horizontal inputs
 {

@@ -14,11 +14,13 @@ functionData = ds_list_create()
 image_xscale = 0.75;
 image_yscale = 0.75;
 
+abilityName1 = "dash"
+
 //Can change
 dashCooldown = 0 //Variable for managing dash cooldown
 yDashOffset = 0 //Variable for managing the y direction of dashStrength
 xDashOffset = 0 //Variable for managing the x direction of dashStrength
-dashLength = 5; //How many frames the dash happens for
+dashLength = 10; //How many frames the dash happens for
 dashStrength = 15; //How many pixels you are moved per frame
 
 
