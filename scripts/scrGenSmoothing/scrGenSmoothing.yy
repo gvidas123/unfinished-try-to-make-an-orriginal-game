@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scrRandomPathGenerator",
+  "name": "scrGenSmoothing",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
