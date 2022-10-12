@@ -6,7 +6,7 @@ window_set_size(objDisplayInit.idealWidth*global.zoom,objDisplayInit.idealHeight
 
 //file_grid = load_csv("testPattern.csv");
 
-xTotalSize = 300
+/*xTotalSize = 300
 yTotalSize = 170
 
 file_grid = ds_grid_create(xTotalSize, yTotalSize)
@@ -34,7 +34,8 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
 		show_debug_message("x")
 		show_debug_message(xPoints[|j])
 		show_debug_message("y")
-		show_debug_message(yPoints[|j])*/
+		show_debug_message(yPoints[|j]) */
+		/*
 		for	(i = 0; i < 10; i++) {
 			var increment = (fullDistance/100)*i
 			var xIncrement = increment*cos(angle1)
@@ -51,13 +52,77 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
 	for (i = 0; i < 9; i++) {
 		ds_grid_set(file_grid, xPoints[|i], yPoints[|i], xPoints[|i])
 	}
+}*/
+
+
+var block_width = global.tileSize
+var block_height = global.tileSize
+var ww = floor(room_width/block_width);
+var hh = floor(room_height/block_height);
+show_debug_message(ww)
+show_debug_message(hh)
+var file_grid = ds_grid_create(ww, hh);
+for (var i = 0; i < room_width/block_width; i += 1) {
+	ds_grid_set(file_grid, i, i, "4");
+	ds_grid_set(file_grid, i-1, i, "4");
+	ds_grid_set(file_grid, i+1, i, "4");
 }
 
-//Pattern filler
-patternGrid = load_csv("testPattern.csv")
+var filenames = ["pattern1.csv", "pattern2.csv", "pattern3.csv"]
 
+var pattern_count = array_length(filenames);
 
+var patterns = array_create(pattern_count)
 
+for (var ind = 0; ind < pattern_count; ++ind) {
+	patterns[ind] = load_csv(filenames[ind]);
+}
+
+var number_of_tries = 10000;
+repeat (number_of_tries) {
+	var placeable = true;
+	var x_cord = irandom(ww-1);
+	var y_cord = irandom(hh-1);
+	
+	var pattern = patterns[irandom(pattern_count-1)];
+	var pattern_width = ds_grid_width(pattern)
+	var pattern_height = ds_grid_height(pattern)
+	
+	// check if does not override path	
+	for (var i = 0; i < pattern_width; ++i) {
+		for (var j = 0; j < pattern_height; ++j) {
+			if (file_grid[# i + x_cord, j + y_cord] == "4") {
+				placeable = false;
+				break;
+			}
+		}
+		if (!placeable) {
+			break;
+		}
+	}
+	if (!placeable) {
+		continue;
+	}
+	
+	for (var i = 0; i < pattern_width; ++i) {
+		for (var j = 0; j < pattern_height; ++j) {
+			file_grid[# i + x_cord, j + y_cord] = pattern[# i, j];
+		}
+	}	
+	
+}
+
+for (var i = 0; i < ww; i++;)
+{
+    for (var j = 0; j < hh; j++;)
+    {
+		var tile = file_grid[# i, j];
+		// show_debug_message(tile)
+		if (tile != 0 && tile != "0" && tile != "4") {
+			instance_create_layer(i*block_width+block_width/2, j*block_width+block_width/2, "blocks", global.tileValues[? tile]);
+		}
+    }
+}
 
 
 
