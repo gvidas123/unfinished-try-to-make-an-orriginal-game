@@ -35,7 +35,7 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
 		show_debug_message(xPoints[|j])
 		show_debug_message("y")
 		show_debug_message(yPoints[|j])*/
-		for	(i = 0; i < 10; i++) {
+		for	(i = 0; i < 100; i++) {
 			var increment = (fullDistance/100)*i
 			var xIncrement = increment*cos(angle1)
 			var yIncrement = increment*sin(angle1)

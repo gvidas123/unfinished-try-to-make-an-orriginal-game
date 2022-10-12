@@ -8,6 +8,13 @@ ability1EndEnable = false;
 canAirActivate = false //Variable for managing mid air activation
 
 functionData = ds_list_create()
+collisionDirection = "none"
+
+coyote = 8
+canJump = false
+wallCoyote = 8
+canWallJump = false
+canAbility1Activate = false
 
 
 //This is bad, need to change sprite instead
