@@ -16,7 +16,7 @@ global.slime_speed = -6;
 global.tileValues = ds_map_create();
 ds_map_add(global.tileValues,"1",objTrialBlock);
 ds_map_add(global.tileValues,"2",objDoor);
-ds_map_add(global.tileValues,"3",objPlayer2);
+ds_map_add(global.tileValues,"3",objPlayer3);
 global.generationGrid = load_csv("testPattern.csv")
 room_goto_next();
 
