@@ -12,6 +12,7 @@ global.zoom = 5;
 global.keySkill_1 = ord("Z")
 global.keyDoor = vk_up;
 global.tileSize = 64;
+global.slime_speed = -6;
 global.tileValues = ds_map_create();
 ds_map_add(global.tileValues,"1",objTrialBlock);
 ds_map_add(global.tileValues,"2",objDoor);
