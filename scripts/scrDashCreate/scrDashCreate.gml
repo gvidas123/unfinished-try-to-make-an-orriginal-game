@@ -50,6 +50,7 @@ function scrDashCreate(dashStrength, dashLength){
 	ds_list_add(functionData, xDashOffset)
 	ds_list_add(functionData, yDashOffset)
 	ds_list_add(functionData, activated)
+	ds_list_add(functionData, false)
 	return functionData
 	/*
 	if (activated == true) {

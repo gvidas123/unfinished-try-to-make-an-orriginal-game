@@ -43,16 +43,11 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
 		show_debug_message("x")
 		show_debug_message(xPoints[|j])
 		show_debug_message("y")
-		show_debug_message(yPoints[|j]) */
-
+		show_debug_message(yPoints[|j])
+		*/
 		for	(i = 0; i < 400; i++) {
 			var increment = (fullDistance/400)*i
 			var xIncrement = increment*cos(angle1)
-			var yIncrement = increment*sin(angle1)
-			xDrawPoint = (xPoints[|j] + xIncrement)
-			yDrawPoint = (yPoints[|j] + yIncrement)
-			//show_debug_message(yDrawPoint)
-			ds_grid_set(file_grid, xDrawPoint, yDrawPoint, "4")
 			//instance_create_depth(xDrawPoint*64, yDrawPoint*64, 1, objTrialBlock)
 		}
 		//show_debug_message("-----------------------------")

@@ -8,9 +8,10 @@ function scrDashStep(functionData){
 		hspeed = 0;
 		y += yDashOffset;
 		x += xDashOffset;
-		if (position_meeting(x + xDashOffset, y + yDashOffset, objTrialBlock)) {
-			functionData[|1] = -yDashOffset*1.5
+		if (position_meeting(x + xDashOffset, y + yDashOffset, objTrialBlock) && functionData[|3] == false) {
 			functionData[|0] = -xDashOffset*1.5
+			functionData[|1] = -yDashOffset*1.5
+			functionData[|3] = true
 		}
 	}
 	return functionData;
