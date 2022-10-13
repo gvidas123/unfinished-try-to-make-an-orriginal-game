@@ -79,6 +79,12 @@ for (var ind = 0; ind < pattern_count; ++ind) {
 	patterns[ind] = load_csv(filenames[ind]);
 }
 
+// sorting patterns based on size in descinding order (hopefully)
+array_sort(patterns, function(a, b) {
+	return ds_grid_width(b) * ds_grid_height(b) - ds_grid_width(a) * ds_grid_height(a);
+});
+
+// TODO: place patterns from the smallest to the largest and optimise overlap checking to edges only
 var number_of_tries = 10000;
 repeat (number_of_tries) {
 	var placeable = true;
