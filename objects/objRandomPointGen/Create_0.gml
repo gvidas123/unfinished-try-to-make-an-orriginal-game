@@ -6,8 +6,11 @@ window_set_size(objDisplayInit.idealWidth*global.zoom,objDisplayInit.idealHeight
 
 //file_grid = load_csv("testPattern.csv");
 
-/*xTotalSize = 300
-yTotalSize = 170
+var block_width = global.tileSize
+var block_height = global.tileSize
+
+xTotalSize = floor(room_width/block_width);
+yTotalSize = floor(room_height/block_height);
 
 file_grid = ds_grid_create(xTotalSize, yTotalSize)
 lineSpace = 170
@@ -15,13 +18,19 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
 	xPoints = ds_list_create()
 	yPoints = ds_list_create()
 	randomize()
-	for (i = 0; i < 10; i++) {
+	ds_list_add(xPoints, 0)
+    ds_list_add(yPoints, 0)
+    for (i = 1; i < 10; i++) {
+        ds_list_add(xPoints, i*30)
+        ds_list_add(yPoints, irandom(lineSpace)+1)//+ (+ (lineLoop lineSpace * 0.8)
+    }
+	/*for (i = 0; i < 10; i++) {
 		ds_list_add(xPoints, i*30)
 		ds_list_add(yPoints, irandom(lineSpace)+1)//+ (+ (lineLoop * lineSpace * 0.8)
-	}
+	}*/
 	//show_debug_message(xPoints[|0])
 	for (i = 0; i < 9; i++) {
-		ds_grid_set(file_grid, xPoints[|i], yPoints[|i], 5)
+		ds_grid_set(file_grid, xPoints[|i], yPoints[|i], "3")
 	}
 	for (j = 0; j < 8; j++) {
 		angle1 = arctan((yPoints[|j+1]-yPoints[|j])/(xPoints[|j+1]-xPoints[|j]))
@@ -35,38 +44,35 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
 		show_debug_message(xPoints[|j])
 		show_debug_message("y")
 		show_debug_message(yPoints[|j]) */
-		/*
-		for	(i = 0; i < 10; i++) {
-			var increment = (fullDistance/100)*i
+
+		for	(i = 0; i < 400; i++) {
+			var increment = (fullDistance/400)*i
 			var xIncrement = increment*cos(angle1)
 			var yIncrement = increment*sin(angle1)
 			xDrawPoint = (xPoints[|j] + xIncrement)
 			yDrawPoint = (yPoints[|j] + yIncrement)
 			//show_debug_message(yDrawPoint)
-			ds_grid_set(file_grid, xDrawPoint, yDrawPoint, 1)
+			ds_grid_set(file_grid, xDrawPoint, yDrawPoint, "4")
 			//instance_create_depth(xDrawPoint*64, yDrawPoint*64, 1, objTrialBlock)
 		}
 		//show_debug_message("-----------------------------")
 	}
 
-	for (i = 0; i < 9; i++) {
+	/*for (i = 0; i < 9; i++) {
 		ds_grid_set(file_grid, xPoints[|i], yPoints[|i], xPoints[|i])
-	}
-}*/
+	}*/
+}
 
-
-var block_width = global.tileSize
-var block_height = global.tileSize
 var ww = floor(room_width/block_width);
 var hh = floor(room_height/block_height);
-show_debug_message(ww)
-show_debug_message(hh)
-var file_grid = ds_grid_create(ww, hh);
-for (var i = 0; i < room_width/block_width; i += 1) {
+//show_debug_message(ww)
+//show_debug_message(hh)
+//var file_grid = ds_grid_create(ww, hh);
+/*for (var i = 0; i < room_width/block_width; i += 1) {
 	ds_grid_set(file_grid, i, i, "4");
 	ds_grid_set(file_grid, i-1, i, "4");
 	ds_grid_set(file_grid, i+1, i, "4");
-}
+}*/
 
 var filenames = ["pattern1.csv", "pattern2.csv", "pattern3.csv"]
 
@@ -91,7 +97,7 @@ repeat (number_of_tries) {
 	// check if does not override path	
 	for (var i = 0; i < pattern_width; ++i) {
 		for (var j = 0; j < pattern_height; ++j) {
-			if (file_grid[# i + x_cord, j + y_cord] == "4") {
+			if (file_grid[# i + x_cord, j + y_cord] != "0") {
 				placeable = false;
 				break;
 			}
@@ -117,9 +123,9 @@ for (var i = 0; i < ww; i++;)
     for (var j = 0; j < hh; j++;)
     {
 		var tile = file_grid[# i, j];
-		// show_debug_message(tile)
+		//show_debug_message(tile)
 		if (tile != 0 && tile != "0" && tile != "4") {
-			instance_create_layer(i*block_width+block_width/2, j*block_width+block_width/2, "blocks", global.tileValues[? tile]);
+			instance_create_layer(i*block_width+block_width/2, j*block_height+block_height/2, "blocks", global.tileValues[? tile]);
 		}
     }
 }
