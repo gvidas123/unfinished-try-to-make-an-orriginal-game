@@ -15,10 +15,13 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
 	xPoints = ds_list_create()
 	yPoints = ds_list_create()
 	randomize()
-	for (i = 0; i < 10; i++) {
+	ds_list_add(xPoints, 0)
+	ds_list_add(yPoints, 0)
+	for (i = 1; i < 10; i++) {
 		ds_list_add(xPoints, i*30)
 		ds_list_add(yPoints, irandom(lineSpace)+1)//+ (+ (lineLoop * lineSpace * 0.8)
 	}
+	
 	//show_debug_message(xPoints[|0])
 	for (i = 0; i < 9; i++) {
 		ds_grid_set(file_grid, xPoints[|i], yPoints[|i], 5)
@@ -42,7 +45,7 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
 			xDrawPoint = (xPoints[|j] + xIncrement)
 			yDrawPoint = (yPoints[|j] + yIncrement)
 			//show_debug_message(yDrawPoint)
-			ds_grid_set(file_grid, xDrawPoint, yDrawPoint, 1)
+			ds_grid_set(file_grid, xDrawPoint, yDrawPoint, 5)
 			//instance_create_depth(xDrawPoint*64, yDrawPoint*64, 1, objTrialBlock)
 		}
 		//show_debug_message("-----------------------------")
@@ -52,9 +55,6 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
 		ds_grid_set(file_grid, xPoints[|i], yPoints[|i], xPoints[|i])
 	}
 }
-
-//Pattern filler
-patternGrid = load_csv("testPattern.csv")
 
 
 
