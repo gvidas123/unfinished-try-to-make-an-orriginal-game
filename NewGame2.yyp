@@ -19,6 +19,7 @@
     {"id":{"name":"scrGenSmoothing","path":"scripts/scrGenSmoothing/scrGenSmoothing.yy",},"order":3,},
     {"id":{"name":"rTrialGenRoom","path":"rooms/rTrialGenRoom/rTrialGenRoom.yy",},"order":5,},
     {"id":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},"order":2,},
+    {"id":{"name":"sprTarget","path":"sprites/sprTarget/sprTarget.yy",},"order":6,},
     {"id":{"name":"objPattern","path":"objects/objPattern/objPattern.yy",},"order":6,},
     {"id":{"name":"sprCircleOfCollision","path":"sprites/sprCircleOfCollision/sprCircleOfCollision.yy",},"order":4,},
     {"id":{"name":"scrDashCreate","path":"scripts/scrDashCreate/scrDashCreate.yy",},"order":1,},
@@ -53,8 +54,8 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
-    {"roomId":{"name":"rRandomPointGen","path":"rooms/rRandomPointGen/rRandomPointGen.yy",},},
     {"roomId":{"name":"rTrialGenRoom","path":"rooms/rTrialGenRoom/rTrialGenRoom.yy",},},
+    {"roomId":{"name":"rRandomPointGen","path":"rooms/rRandomPointGen/rRandomPointGen.yy",},},
     {"roomId":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},},
     {"roomId":{"name":"rStartingRoom","path":"rooms/rStartingRoom/rStartingRoom.yy",},},
     {"roomId":{"name":"rTrialRoom2","path":"rooms/rTrialRoom2/rTrialRoom2.yy",},},

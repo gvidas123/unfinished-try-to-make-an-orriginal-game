@@ -28,7 +28,7 @@ dashCooldown = 0 //Variable for managing dash cooldown
 yDashOffset = 0 //Variable for managing the y direction of dashStrength
 xDashOffset = 0 //Variable for managing the x direction of dashStrength
 dashLength = 10; //How many frames the dash happens for
-dashStrength = 15; //How many pixels you are moved per frame
+dashStrength = 20; //How many pixels you are moved per frame
 
 
 

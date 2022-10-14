@@ -8,7 +8,7 @@ function scrDashStep(functionData){
 		hspeed = 0;
 		y += yDashOffset;
 		x += xDashOffset;
-		if (position_meeting(x + xDashOffset, y + yDashOffset, objTrialBlock) && functionData[|3] == false) {
+		if (place_meeting(x + xDashOffset, y + yDashOffset, objTrialBlock) && functionData[|3] == false) { //place meeting may be expensive, maybe try collision point or collision rectangle
 			functionData[|0] = -xDashOffset*1.5
 			functionData[|1] = -yDashOffset*1.5
 			functionData[|3] = true

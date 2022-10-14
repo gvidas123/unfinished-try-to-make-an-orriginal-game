@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+mouseAngle = -arctan2(mouse_y-y, mouse_x-x) * (180 / pi) + 90
 
 //Constant speed changes over time
 {
@@ -87,13 +87,13 @@
 
 
 //Start effect
-if (keyboard_check(global.keySkill_1) && ability1Cooldown == 0 && canAbility1Activate == true) {
+if (mouse_check_button_pressed(mb_left) && ability1Cooldown == 0 && canAbility1Activate == true) {
 	switch (abilityName1) {
 		case "dash":
 			ability1Cooldown = 30
 			canAbility1Activate = false;
 			ability1StepLength = 5;
-			functionData = scrDashCreate(dashStrength, dashLength)
+			functionData = scrDashCreate2(dashStrength, dashLength)
 			break;
 	}		
 }
