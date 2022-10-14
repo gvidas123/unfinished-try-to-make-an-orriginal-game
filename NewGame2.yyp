@@ -5,6 +5,7 @@
   "resources": [
     {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},"order":5,},
     {"id":{"name":"rOptions","path":"rooms/rOptions/rOptions.yy",},"order":4,},
+    {"id":{"name":"objPlayer4","path":"objects/objPlayer4/objPlayer4.yy",},"order":2,},
     {"id":{"name":"objHitDoor","path":"objects/objHitDoor/objHitDoor.yy",},"order":1,},
     {"id":{"name":"objPlayer3","path":"objects/objPlayer3/objPlayer3.yy",},"order":1,},
     {"id":{"name":"scrDashStep","path":"scripts/scrDashStep/scrDashStep.yy",},"order":2,},
@@ -26,6 +27,7 @@
     {"id":{"name":"scrDashEnd","path":"scripts/scrDashEnd/scrDashEnd.yy",},"order":0,},
     {"id":{"name":"scrGenPatternUniversal","path":"scripts/scrGenPatternUniversal/scrGenPatternUniversal.yy",},"order":1,},
     {"id":{"name":"fontMainMenu","path":"fonts/fontMainMenu/fontMainMenu.yy",},"order":0,},
+    {"id":{"name":"scrDashCreate2","path":"scripts/scrDashCreate2/scrDashCreate2.yy",},"order":3,},
     {"id":{"name":"objTrialBlock","path":"objects/objTrialBlock/objTrialBlock.yy",},"order":2,},
     {"id":{"name":"sprDestroyableBlock","path":"sprites/sprDestroyableBlock/sprDestroyableBlock.yy",},"order":3,},
     {"id":{"name":"objOpttionManager","path":"objects/objOpttionManager/objOpttionManager.yy",},"order":1,},

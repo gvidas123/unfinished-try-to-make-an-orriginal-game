@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (object_exists(objPlayer3)) {
-	x = objPlayer3.x -camera_get_view_width(view_camera[0]) /2;
-	y = objPlayer3.y -camera_get_view_height(view_camera[0]) /2;
+if (object_exists(objPlayer4)) {
+	x = objPlayer4.x -camera_get_view_width(view_camera[0]) /2;
+	y = objPlayer4.y -camera_get_view_height(view_camera[0]) /2;
 }
 else {
 	if (keyboard_check(vk_right)) {
