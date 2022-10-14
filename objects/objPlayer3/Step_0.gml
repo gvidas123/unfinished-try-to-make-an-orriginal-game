@@ -51,13 +51,13 @@
 		else {
 			vspeed += -10
 		}
-		jumpCooldown = 30
+		jumpCooldown = 15
 		canWallJump = false
 	}
 	//Ground jump
 	if (keyboard_check(global.keyJump) && canJump == true && jumpCooldown == 0) {
 		vspeed = -18
-		jumpCooldown = 30
+		jumpCooldown = 15
 		canJump = false
 	}
 }
