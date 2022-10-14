@@ -1,10 +1,13 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scrDashCreate(dashStrength, dashLength){
+function scrDashCreate2(dashStrength, dashLength){
 	var activated = false
 	var xDashOffset = 0
 	var yDashOffset = 0
 	var mouseAngle = arctan2(mouse_y-y, mouse_x-x) * (180 / pi)
+	
+	
+	
 	if (keyboard_check(global.keyUp) || keyboard_check(global.keyDown) || keyboard_check(global.keyRight) || keyboard_check(global.keyLeft)) {
 		activated = true
 	}

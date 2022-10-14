@@ -24,10 +24,7 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
         ds_list_add(xPoints, i*30)
         ds_list_add(yPoints, irandom(lineSpace)+1)//+ (+ (lineLoop lineSpace * 0.8)
     }
-	/*for (i = 0; i < 10; i++) {
-		ds_list_add(xPoints, i*30)
-		ds_list_add(yPoints, irandom(lineSpace)+1)//+ (+ (lineLoop * lineSpace * 0.8)
-	}*/
+	
 	//show_debug_message(xPoints[|0])
 	for (i = 0; i < 9; i++) {
 		ds_grid_set(file_grid, xPoints[|i], yPoints[|i], "3")
@@ -48,6 +45,12 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
 		for	(i = 0; i < 400; i++) {
 			var increment = (fullDistance/400)*i
 			var xIncrement = increment*cos(angle1)
+			var yIncrement = increment*sin(angle1)
+            xDrawPoint = (xPoints[|j] + xIncrement)
+            yDrawPoint = (yPoints[|j] + yIncrement)
+            //show_debug_message(yDrawPoint)
+            ds_grid_set(file_grid, xDrawPoint, yDrawPoint, 1)
+            ds_grid_set(file_grid, xDrawPoint, yDrawPoint, "4")
 			//instance_create_depth(xDrawPoint*64, yDrawPoint*64, 1, objTrialBlock)
 		}
 		//show_debug_message("-----------------------------")
