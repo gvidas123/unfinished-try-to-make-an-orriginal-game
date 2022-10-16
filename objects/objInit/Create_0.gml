@@ -9,9 +9,10 @@ global.keyJump = vk_space
 global.volume = 1;
 global.acceleration = 1;
 global.zoom = 5;
-global.keySkill_1 = mb_left
+global.keySkill_1 = ord("E");
 global.keyDoor = vk_up;
 global.tileSize = 64;
+global.slime_speed = 10;
 global.tileValues = ds_map_create();
 ds_map_add(global.tileValues,"1",objTrialBlock);
 ds_map_add(global.tileValues,"2",objDoor);

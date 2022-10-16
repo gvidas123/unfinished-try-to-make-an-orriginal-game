@@ -8,9 +8,6 @@ mouseAngle = -arctan2(mouse_y-y, mouse_x-x) * (180 / pi) + 90
 	if (abs(hspeed) >= 10) {
 		hspeed /= 1.01;
 	}
-	if (abs(hspeed) >= 50) {
-		hspeed /= 1.5;
-	}
 	vspeed += global.grav
 	
 }
