@@ -1,7 +1,35 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-mouseAngle = -arctan2(mouse_y-y, mouse_x-x) * (180 / pi) + 90
+mouseAngle = -arctan2(mouse_y-y, mouse_x-x)
+
+if (place_meeting(x + xDashOffset, y + yDashOffset, objArrow)) { //place meeting may be expensive, maybe try collision point or collision rectangle
+	var arrow = instance_nearest(x, y, objArrow)
+	if (arrow.lifetime > 3) {
+		var hitAngle = -arctan2(arrow.y-y, arrow.x-x)
+		vspeed = (sin(hitAngle))*arrow.vspeed*1.5;
+		hspeed = (cos(hitAngle))*arrow.hspeed*1.5;
+		instance_destroy(arrow)
+	}
+}
+
+
+//Speed limits
+{
+	if (vspeed > maxVSpeed) {
+		vspeed = maxVSpeed
+	}
+	else if (vspeed < -maxVSpeed) {
+		vspeed = -maxVSpeed
+	}
+	
+	if (hspeed > maxHSpeed) {
+		hspeed = maxHSpeed
+	}
+	else if (hspeed < -maxHSpeed) {
+		hspeed = -maxHSpeed
+	}
+}
 
 //Constant speed changes over time
 {
@@ -19,6 +47,9 @@ mouseAngle = -arctan2(mouse_y-y, mouse_x-x) * (180 / pi) + 90
 	}
 	if (ability1Cooldown > 0) {
 		ability1Cooldown--
+	}
+	if (ability2Cooldown > 0) {
+		ability2Cooldown--
 	}
 	if (wallCoyote > 0) {
 		wallCoyote--
@@ -82,41 +113,125 @@ mouseAngle = -arctan2(mouse_y-y, mouse_x-x) * (180 / pi) + 90
 
 
 
+//Ability 1
+{
+	//Start effect
+	if (mouse_check_button_pressed(mb_left) && ability1Cooldown == 0 && canAbility1Activate == true) {
+		switch (abilityName1) {
+			case "dash":
+				ability1Cooldown = 30
+				canAbility1Activate = false;
+				ability1StepLength = 5;
+				functionData = scrDashCreate2(dashStrength, dashLength)
+				break;
+			case "bow":
+				ability1Cooldown = 30
+				canAbility1Activate = false;
+				ability1StepLength = 5;
+				functionData = scrDashCreate2(dashStrength, dashLength)
+				break;
+		}		
+	}
 
-//Start effect
-if (mouse_check_button_pressed(mb_left) && ability1Cooldown == 0 && canAbility1Activate == true) {
-	switch (abilityName1) {
-		case "dash":
-			ability1Cooldown = 30
-			canAbility1Activate = false;
-			ability1StepLength = 5;
-			functionData = scrDashCreate2(dashStrength, dashLength)
-			break;
-	}		
+	//Over time effect
+	if (ability1StepLength > 0) {
+		switch (abilityName1) {
+			case "dash":
+				if (ability1StepLength == 1) {
+					ability1EndEnable = true
+				}
+				ability1StepLength--;
+				functionData = scrDashStep(functionData)
+				break;
+			case "bow":
+				ability1Cooldown = 30
+				canAbility1Activate = false;
+				ability1StepLength = 5;
+				functionData = scrDashCreate2(dashStrength, dashLength)
+				break;
+		}	
+	}
+
+	//End effect
+	if (ability1EndEnable == true) {
+		ability1EndEnable = false
+		switch (abilityName1) {
+			case "dash":
+				scrDashEnd(functionData);
+				break;
+			case "bow":
+				ability1Cooldown = 30
+				canAbility1Activate = false;
+				ability1StepLength = 5;
+				functionData = scrDashCreate2(dashStrength, dashLength)
+				break;
+		}	
+	}
 }
 
-//Over time effect
-if (ability1StepLength > 0) {
-	switch (abilityName1) {
-		case "dash":
-			if (ability1StepLength == 1) {
-				ability1EndEnable = true
-			}
-			ability1StepLength--;
-			functionData = scrDashStep(functionData)
-			break;
-	}	
+//Ability 2
+{
+	//Start effect
+	if (mouse_check_button_pressed(mb_right) && ability2Cooldown == 0 && canAbility2Activate == true) {
+		show_debug_message("create")
+		switch (abilityName2) {
+			case "dash":
+				ability2Cooldown = 30
+				canAbility2Activate = false;
+				ability2StepLength = 5;
+				functionData = scrDashCreate2(dashStrength, dashLength)
+				break;
+			case "bow":
+				ability2Cooldown = 30
+				canAbility2Activate = false;
+				ability2StepLength = 50;
+				functionData = scrBowCreate()
+				break;
+		}		
+	}
+
+	//Over time effect
+	if (ability2StepLength > 0) {
+		switch (abilityName2) {
+			case "dash":
+				if (ability2StepLength == 1) {
+					ability2EndEnable = true
+				}
+				ability2StepLength--;
+				functionData = scrDashStep(functionData)
+				break;
+			case "bow":
+				if (mouse_check_button(mb_right)) {
+					if (ability2StepLength == 1) {
+						ability2EndEnable = true
+					}
+					ability2StepLength--
+					functionData = scrBowStep(functionData)
+					break;
+				}
+				else {
+					ability2StepLength = 0
+					ability2EndEnable = true
+				}
+				
+		}	
+	}
+
+	//End effect
+	if (ability2EndEnable == true) {
+		ability2EndEnable = false
+		switch (abilityName2) {
+			case "dash":
+				scrDashEnd(functionData);
+				break;
+			case "bow":
+				scrBowEnd(functionData)
+				canAbility2Activate = true
+				break;
+		}	
+	}
 }
 
-//End effect
-if (ability1EndEnable == true) {
-	ability1EndEnable = false
-	switch (abilityName1) {
-		case "dash":
-			scrDashEnd(functionData);
-			break;
-	}	
-}
 
 
 

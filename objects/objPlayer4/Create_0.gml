@@ -5,6 +5,13 @@ jumpCooldown = 0 //Variable for managing jump cooldown
 ability1Cooldown = 0 //Variable for managing ability 1 cooldown
 ability1StepLength = 0;
 ability1EndEnable = false;
+canAbility1Activate = false
+
+ability2Cooldown = 0 //Variable for managing ability 1 cooldown
+ability2StepLength = 0;
+ability2EndEnable = false;
+canAbility2Activate = true
+
 canAirActivate = false //Variable for managing mid air activation
 
 functionData = ds_list_create()
@@ -14,14 +21,17 @@ coyote = 8
 canJump = false
 wallCoyote = 8
 canWallJump = false
-canAbility1Activate = false
 
+
+maxHSpeed = infinity
+maxVSpeed = infinity
 
 //This is bad, need to change sprite instead
 image_xscale = 0.75;
 image_yscale = 0.75;
 
 abilityName1 = "dash"
+abilityName2 = "bow"
 
 //Can change
 dashCooldown = 0 //Variable for managing dash cooldown
