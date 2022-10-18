@@ -70,10 +70,10 @@ repeat(floor(gridWidth*gridHeight /2)) {
 		controllerY -= yDir*2;
 	}
 }
-repeat(smoothness) {
+repeat(0) {
 	scrGenSmoothing(grid);
 }
+scrCompletlyRandomSlimeSpawning(grid);
 
-
-ds_grid_set(grid,6,6,"3")// floor(gridWidth/2), floor(gridHeight/2),"3");
+ds_grid_set(grid,6,6,"5")
 scrGenPatternUniversal(0,0,grid,global.tileValues,global.tileSize,"instances");

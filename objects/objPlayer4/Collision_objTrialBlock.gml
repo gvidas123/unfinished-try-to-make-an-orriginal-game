@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+/// @description Insert description here
+// You can write your code in this editor
+
 
 
 
@@ -37,12 +40,3 @@ if (!place_free(x,y+vspeed))
 
 
 if (!place_free(x+hspeed,y+vspeed)) {hspeed = 0;}
-
-
-
-
-
-
-
-
-

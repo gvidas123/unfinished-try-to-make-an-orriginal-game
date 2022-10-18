@@ -14,9 +14,7 @@ global.keyDoor = vk_up;
 global.tileSize = 64;
 global.slime_speed = 10;
 global.tileValues = ds_map_create();
-ds_map_add(global.tileValues,"1",objTrialBlock);
-ds_map_add(global.tileValues,"2",objDoor);
-ds_map_add(global.tileValues,"3",objDestroyableBlock);
+scrTileValueInit(global.tileValues);
 global.generationGrid = load_csv("testPattern.csv")
 room_goto_next();
 
