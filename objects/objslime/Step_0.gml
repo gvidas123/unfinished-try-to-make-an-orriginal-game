@@ -36,11 +36,11 @@ if (collision_point(x-objSlime.sprite_width/2+hspeed,y,objTrialBlock,false,false
 	walkingDirection = -walkingDirection
 	hspeed = -hspeed;
 }
-if (!collision_point(x-objSlime.sprite_width/8,y+objSlime.sprite_height/2,objTrialBlock,false,false)) {
+if (!collision_point(x-objSlime.sprite_width/4,y+objSlime.sprite_height/2+1,objTrialBlock,false,false)) {
 	walkingDirection = -walkingDirection
 	hspeed = -hspeed;
 }
-if (!collision_point(x+objSlime.sprite_width/8,y+objSlime.sprite_height/2,objTrialBlock,false,false)) {
+if (!collision_point(x+objSlime.sprite_width/4,y+objSlime.sprite_height/2+1 ,objTrialBlock,false,false)) {
 	walkingDirection = -walkingDirection
 	hspeed = -hspeed;
 }

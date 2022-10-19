@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scrGenPatternUniversal(xOrigin,yOrigin,grid,map,tileS,layerId) {
-	show_debug_message("as");
+	//show_debug_message("as");
 	xOrigin += (tileS/2);
 	yOrigin += (tileS/2);
 	var variable0 = 0;
