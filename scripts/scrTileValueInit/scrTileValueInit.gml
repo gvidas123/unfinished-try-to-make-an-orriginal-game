@@ -6,5 +6,6 @@ function scrTileValueInit(map){
 	ds_map_add(map,"3",objDestroyableBlock);
 	ds_map_add(map,"4",objSlime);
 	ds_map_add(map,"5",objPlayer4);
+	ds_map_add(map,"6",objBird);
 	return map
 }

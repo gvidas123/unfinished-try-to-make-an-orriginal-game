@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scrCompletlyRandomSlimeSpawning",
+  "name": "scrCompletlyRandomBirdSpawning",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

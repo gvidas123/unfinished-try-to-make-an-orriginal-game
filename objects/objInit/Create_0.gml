@@ -13,6 +13,7 @@ global.keySkill_1 = ord("E");
 global.keyDoor = vk_up;
 global.tileSize = 64;
 global.slime_speed = 10;
+global.birdSpeed = 8;
 global.tileValues = ds_map_create();
 scrTileValueInit(global.tileValues);
 global.generationGrid = load_csv("testPattern.csv")
