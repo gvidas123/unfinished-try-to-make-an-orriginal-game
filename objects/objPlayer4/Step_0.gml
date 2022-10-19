@@ -110,9 +110,11 @@ if (place_meeting(x + xDashOffset, y + yDashOffset, objArrow)) { //place meeting
 	}
 }
 
+ability1Data = scrAbilityFrame(abilityName1, ability1Data, ability1Key)
+ability2Data = scrAbilityFrame(abilityName2, ability2Data, ability2Key)
 
 
-
+/*
 //Ability 1
 {
 	//Start effect
@@ -167,8 +169,8 @@ if (place_meeting(x + xDashOffset, y + yDashOffset, objArrow)) { //place meeting
 				break;
 		}	
 	}
-}
-
+}*/
+/*
 //Ability 2
 {
 	//Start effect
@@ -230,7 +232,7 @@ if (place_meeting(x + xDashOffset, y + yDashOffset, objArrow)) { //place meeting
 				break;
 		}	
 	}
-}
+}*/
 
 
 

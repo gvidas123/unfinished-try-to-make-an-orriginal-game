@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "objArrow",
   "spriteId": {
-    "name": "sprSlime",
-    "path": "sprites/sprSlime/sprSlime.yy",
+    "name": "sprPlayer",
+    "path": "sprites/sprPlayer/sprPlayer.yy",
   },
   "solid": false,
   "visible": true,
