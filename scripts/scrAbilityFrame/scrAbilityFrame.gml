@@ -1,84 +1,52 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scrAbilityFrame(abilityName, abilityData, abilityKey){
-	var functionData = abilityData[|0]
-	var canAbilityActivate = abilityData[|1]
-	var abilityEndEnable = abilityData[|2]
-	var abilityStepLength = abilityData[|3]
-	var abilityCooldown = abilityData[|4]
-	if (abilityCooldown > 0) {
+	var functionData = abilityData[|0] //data that travels inbetween function calls
+	var canAbilityActivate = abilityData[|1] //special check for whether an ability can activate that's checked outside this function
+	var abilityCooldown = abilityData[|2] //amount of steps before you can activate the ability
+	
+	if (abilityCooldown > 0) { //lowers the cooldown per step
 		abilityCooldown--;
 	}
+	show_debug_message(functionData[|0])
 	
-	
-	//Start effect
-	if (mouse_check_button_pressed(abilityKey) && abilityCooldown == 0 && canAbilityActivate == true) {
-		switch (abilityName) {
-			case "dash":
+	switch (abilityName) {
+		case "dash":
+			if (mouse_check_button_pressed(abilityKey) && abilityCooldown == 0 && canAbilityActivate == true) {
+				functionData[|0] = 1
 				abilityCooldown = 30
-				canAbilityActivate = false;
-				abilityStepLength = 5;
-				functionData = scrDashCreate2(20, 10)
-				break;
-			case "bow":
-				show_debug_message("HOW")
+				canAbilityActivate = false
+			}
+			functionData = scrDash(functionData, 20, 10);
+			break;
+			
+			
+			
+		case "bow":
+			if (mouse_check_button_pressed(abilityKey) && abilityCooldown == 0 && canAbilityActivate == true) {
+				functionData[|0] = 1
+				functionData[|2] = abilityKey
 				abilityCooldown = 30
-				canAbilityActivate = false;
-				abilityStepLength = 50;
-				functionData = scrBowCreate()
-				break;
-			default:
-				show_debug_message("Wrong ability name set")
-				break;
-		}		
-	}
-
-	//Over time effect
-	if (abilityStepLength > 0) {
-		switch (abilityName) {
-			case "dash":
-				if (abilityStepLength == 1) {
-					abilityEndEnable = true
-				}
-				abilityStepLength--;
-				functionData = scrDashStep(functionData)
-				break;
-			case "bow":
-				if (mouse_check_button(abilityKey)) {
-					if (abilityStepLength == 1) {
-						abilityEndEnable = true
-					}
-					abilityStepLength--
-					functionData = scrBowStep(functionData)
-					break;
-				}
-				else {
-					abilityStepLength = 0
-					abilityEndEnable = true
-				}
-				
-		}	
-	}
-
-	//End effect
-	if (abilityEndEnable == true) {
-		abilityEndEnable = false
-		switch (abilityName) {
-			case "dash":
-				scrDashEnd(functionData);
-				break;
-			case "bow":
-				scrBowEnd(functionData)
-				canAbilityActivate = true
-				break;
-		}	
-	}
+				canAbilityActivate = false
+			}
+			functionData = scrBow(functionData)
+			canAbilityActivate = true
+			break;
+			
+			
+			
+		default: //template code to copy from
+			if (mouse_check_button_pressed(abilityKey) && abilityCooldown == 0 && canAbilityActivate == true) {
+				functionData[|0] = 1 //Sets state to 1 to start the create state
+				abilityCooldown = 30 //Sets cooldown
+				canAbilityActivate = false //Sets whether you can use the ability (is usually set back to true after it ends)
+			}
+			functionData = scrBowEnd(functionData)
+			canAbilityActivate = true
+			break;
+	}	
 	
 	abilityData = ds_list_create()
 	ds_list_add(abilityData, functionData)
 	ds_list_add(abilityData, canAbilityActivate)
-	ds_list_add(abilityData, abilityEndEnable)
-	ds_list_add(abilityData, abilityStepLength)
 	ds_list_add(abilityData, abilityCooldown)
 	return abilityData
 }
