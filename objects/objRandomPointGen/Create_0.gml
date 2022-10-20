@@ -72,14 +72,19 @@ var hh = floor(room_height/block_height);
 	ds_grid_set(file_grid, i+1, i, "4");
 }*/
 
-var filenames = ["pattern1.csv", "pattern2.csv", "pattern3.csv"]
+var filenames = ds_list_create();
 
-var pattern_count = array_length(filenames);
+for (var filename = file_find_first(working_directory + "*.csv", fa_directory); filename != ""; filename = file_find_next()) {
+	ds_list_add(filenames, filename);
+}
+file_find_close();
+
+var pattern_count = ds_list_size(filenames);
 
 var patterns = array_create(pattern_count)
 
 for (var ind = 0; ind < pattern_count; ++ind) {
-	patterns[ind] = load_csv(filenames[ind]);
+	patterns[ind] = load_csv(ds_list_find_value(filenames, ind));
 }
 
 // sorting patterns based on size in descinding order (hopefully)
@@ -87,18 +92,19 @@ array_sort(patterns, function(a, b) {
 	return ds_grid_width(b) * ds_grid_height(b) - ds_grid_width(a) * ds_grid_height(a);
 });
 
-// TODO: place patterns from the smallest to the largest and optimise overlap checking to edges only
+
+// TODO: place patterns from the largest to the smallest and optimise overlap checking to edges only
 var number_of_tries = 10000;
-repeat (number_of_tries) {
-	var placeable = true;
-	var x_cord = irandom(ww-1);
-	var y_cord = irandom(hh-1);
-	
+repeat (number_of_tries) {	
 	var pattern = patterns[irandom(pattern_count-1)];
 	var pattern_width = ds_grid_width(pattern)
 	var pattern_height = ds_grid_height(pattern)
 	
+	var x_cord = irandom(ww-pattern_width);
+	var y_cord = irandom(hh-pattern_height);
+	
 	// check if does not override path	
+	var placeable = true;
 	for (var i = 0; i < pattern_width; ++i) {
 		for (var j = 0; j < pattern_height; ++j) {
 			if (file_grid[# i + x_cord, j + y_cord] != "0") {
@@ -128,7 +134,7 @@ for (var i = 0; i < ww; i++;)
     {
 		var tile = file_grid[# i, j];
 		//show_debug_message(tile)
-		if (tile != 0 && tile != "0" && tile != "4") {
+		if (tile != 0 && tile != "0" && tile != "4" && tile != "-1") {
 			instance_create_layer(i*block_width+block_width/2, j*block_height+block_height/2, "blocks", global.tileValues[? tile]);
 		}
     }

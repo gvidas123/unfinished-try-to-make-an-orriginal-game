@@ -64,10 +64,10 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
+    {"roomId":{"name":"rRandomPointGen","path":"rooms/rRandomPointGen/rRandomPointGen.yy",},},
     {"roomId":{"name":"rTrialGenRoom","path":"rooms/rTrialGenRoom/rTrialGenRoom.yy",},},
     {"roomId":{"name":"rFlatRoom","path":"rooms/rFlatRoom/rFlatRoom.yy",},},
     {"roomId":{"name":"rStartingRoom","path":"rooms/rStartingRoom/rStartingRoom.yy",},},
-    {"roomId":{"name":"rRandomPointGen","path":"rooms/rRandomPointGen/rRandomPointGen.yy",},},
     {"roomId":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},},
     {"roomId":{"name":"rTrialRoom2","path":"rooms/rTrialRoom2/rTrialRoom2.yy",},},
     {"roomId":{"name":"rOptions","path":"rooms/rOptions/rOptions.yy",},},
@@ -108,6 +108,9 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"pattern1.csv","CopyToMask":3035426170322551022,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"pattern2.csv","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"pattern3.csv","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"2x2_full_block.csv","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"something.csv","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"empty_box.csv","CopyToMask":-1,"filePath":"datafiles",},
   ],
   "MetaData": {
     "IDEVersion": "2022.8.1.37",
