@@ -29,6 +29,7 @@
     {"id":{"name":"rTrialGenRoom","path":"rooms/rTrialGenRoom/rTrialGenRoom.yy",},"order":5,},
     {"id":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},"order":2,},
     {"id":{"name":"sprTarget","path":"sprites/sprTarget/sprTarget.yy",},"order":6,},
+    {"id":{"name":"objEmpty","path":"objects/objEmpty/objEmpty.yy",},"order":3,},
     {"id":{"name":"objBird","path":"objects/objBird/objBird.yy",},"order":1,},
     {"id":{"name":"objPattern","path":"objects/objPattern/objPattern.yy",},"order":6,},
     {"id":{"name":"scrTemplate","path":"scripts/scrTemplate/scrTemplate.yy",},"order":4,},
@@ -72,8 +73,8 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
-    {"roomId":{"name":"rTrialGenRoom","path":"rooms/rTrialGenRoom/rTrialGenRoom.yy",},},
     {"roomId":{"name":"rRandomPointGen","path":"rooms/rRandomPointGen/rRandomPointGen.yy",},},
+    {"roomId":{"name":"rTrialGenRoom","path":"rooms/rTrialGenRoom/rTrialGenRoom.yy",},},
     {"roomId":{"name":"rFlatRoom","path":"rooms/rFlatRoom/rFlatRoom.yy",},},
     {"roomId":{"name":"rStartingRoom","path":"rooms/rStartingRoom/rStartingRoom.yy",},},
     {"roomId":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},},
@@ -117,6 +118,9 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"pattern1.csv","CopyToMask":3035426170322551022,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"pattern2.csv","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"pattern3.csv","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"defaultIsland.csv","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"collapsingIsland.csv","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"miniIsland.csv","CopyToMask":-1,"filePath":"datafiles",},
   ],
   "MetaData": {
     "IDEVersion": "2022.8.1.37",

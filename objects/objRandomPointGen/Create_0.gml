@@ -72,7 +72,8 @@ var hh = floor(room_height/block_height);
 	ds_grid_set(file_grid, i+1, i, "4");
 }*/
 
-var filenames = ["pattern1.csv", "pattern2.csv", "pattern3.csv"]
+//var filenames = ["pattern1.csv", "pattern2.csv", "pattern3.csv"]
+var filenames = ["defaultIsland.csv", "collapsingIsland.csv", "miniIsland.csv"]
 
 var pattern_count = array_length(filenames);
 
@@ -128,7 +129,7 @@ for (var i = 0; i < ww; i++;)
     {
 		var tile = file_grid[# i, j];
 		//show_debug_message(tile)
-		if (tile != 0 && tile != "0" && tile != "4") {
+		if (tile != 0 && tile != "0" && tile != "-1" && tile != "4") {
 			instance_create_layer(i*block_width+block_width/2, j*block_height+block_height/2, "blocks", global.tileValues[? tile]);
 		}
     }

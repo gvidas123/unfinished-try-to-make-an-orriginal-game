@@ -241,7 +241,7 @@ ability2Data = scrAbilityFrame(abilityName2, ability2Data, ability2Key)
 
 
 
-if (keyboard_check_pressed(global.keySkill_1)) {
+if (mouse_check_button(ability1Key)) {
 	insObjHitArea = instance_create_depth(x, y, 0, objHitArea);
 	alarm[0] = 2
 }

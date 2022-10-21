@@ -30,8 +30,8 @@ function scrBow(functionData){
 		var arrow = instance_create_depth(x, y, 0, objArrow)
 		var mouseAngle = -arctan2(mouse_y-y, mouse_x-x)
 		arrow.image_angle = mouseAngle
-		arrow.vspeed = -(sin(mouseAngle))*arrowPower;
-		arrow.hspeed = (cos(mouseAngle))*arrowPower;
+		arrow.vspeed = -(sin(mouseAngle))*arrowPower
+		arrow.hspeed = (cos(mouseAngle))*arrowPower
 		maxHSpeed = infinity
 	}
 	
