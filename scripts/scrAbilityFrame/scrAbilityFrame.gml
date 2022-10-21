@@ -6,7 +6,7 @@ function scrAbilityFrame(abilityName, abilityData, abilityKey){
 	if (abilityCooldown > 0) { //lowers the cooldown per step
 		abilityCooldown--;
 	}
-	show_debug_message(functionData[|0])
+	
 	
 	switch (abilityName) {
 		case "dash":

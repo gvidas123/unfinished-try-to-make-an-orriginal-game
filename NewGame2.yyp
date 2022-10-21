@@ -53,7 +53,6 @@
     {"id":{"name":"objDoor","path":"objects/objDoor/objDoor.yy",},"order":0,},
     {"id":{"name":"sprSlime","path":"sprites/sprSlime/sprSlime.yy",},"order":6,},
     {"id":{"name":"objDisplayInit","path":"objects/objDisplayInit/objDisplayInit.yy",},"order":1,},
-    {"id":{"name":"objPlayer2","path":"objects/objPlayer2/objPlayer2.yy",},"order":0,},
     {"id":{"name":"objDestroyableBlock","path":"objects/objDestroyableBlock/objDestroyableBlock.yy",},"order":1,},
     {"id":{"name":"rInit","path":"rooms/rInit/rInit.yy",},"order":1,},
     {"id":{"name":"scrCompletlyRandomSlimeSpawning","path":"scripts/scrCompletlyRandomSlimeSpawning/scrCompletlyRandomSlimeSpawning.yy",},"order":0,},
@@ -76,8 +75,8 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
-    {"roomId":{"name":"rRandomPointGen","path":"rooms/rRandomPointGen/rRandomPointGen.yy",},},
     {"roomId":{"name":"rTrialGenRoom","path":"rooms/rTrialGenRoom/rTrialGenRoom.yy",},},
+    {"roomId":{"name":"rRandomPointGen","path":"rooms/rRandomPointGen/rRandomPointGen.yy",},},
     {"roomId":{"name":"rRoguelandsKinda","path":"rooms/rRoguelandsKinda/rRoguelandsKinda.yy",},},
     {"roomId":{"name":"rFlatRoom","path":"rooms/rFlatRoom/rFlatRoom.yy",},},
     {"roomId":{"name":"rStartingRoom","path":"rooms/rStartingRoom/rStartingRoom.yy",},},

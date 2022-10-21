@@ -75,5 +75,6 @@ repeat(4) {
 }
 scrCompletlyRandomSlimeSpawning(grid);
 scrCompletlyRandomBirdSpawning(grid,5);
+scrDoorGeneration(grid);
 ds_grid_set(grid,6,6,"5")
 scrGenPatternUniversal(0,0,grid,global.tileValues,global.tileSize,"instances");

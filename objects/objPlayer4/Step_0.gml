@@ -175,7 +175,7 @@ ability2Data = scrAbilityFrame(abilityName2, ability2Data, ability2Key)
 {
 	//Start effect
 	if (mouse_check_button_pressed(mb_right) && ability2Cooldown == 0 && canAbility2Activate == true) {
-		show_debug_message("create")
+
 		switch (abilityName2) {
 			case "dash":
 				ability2Cooldown = 30

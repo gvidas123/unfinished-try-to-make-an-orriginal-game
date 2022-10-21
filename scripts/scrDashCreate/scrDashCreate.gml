@@ -9,7 +9,7 @@ function scrDashCreate(dashStrength, dashLength){
 		activated = true
 	}
 	if (keyboard_check(global.keyUp)) {
-		show_debug_message("up")
+	
 		xDashOffset = 0;
 		yDashOffset = -dashStrength;
 		if (keyboard_check(global.keyLeft)) {
@@ -23,7 +23,7 @@ function scrDashCreate(dashStrength, dashLength){
 		}
 	}
 	else if (keyboard_check(global.keyDown)) {
-		show_debug_message("down")
+		
 		xDashOffset = 0;
 		yDashOffset = dashStrength;
 		if (keyboard_check(global.keyLeft)) {
@@ -37,12 +37,12 @@ function scrDashCreate(dashStrength, dashLength){
 		}
 	}
 	else if (keyboard_check(global.keyRight)) {
-		show_debug_message("right")
+		
 		yDashOffset = 0;
 		xDashOffset = dashStrength*1.42;
 	}
 	else if (keyboard_check(global.keyLeft)) {
-		show_debug_message("left")
+	
 		yDashOffset = 0;
 		xDashOffset = -dashStrength*1.42;
 	}

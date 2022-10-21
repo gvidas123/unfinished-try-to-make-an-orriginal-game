@@ -17,7 +17,6 @@
   ],
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"player","instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_28073350","properties":[],"isDnd":false,"objectId":{"name":"objPlayer2","path":"objects/objPlayer2/objPlayer2.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":896.0,"y":928.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_100FE7D8","properties":[],"isDnd":false,"objectId":{"name":"objTrialBlock","path":"objects/objTrialBlock/objTrialBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1824.0,"y":800.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_650FEA33","properties":[],"isDnd":false,"objectId":{"name":"objTrialBlock","path":"objects/objTrialBlock/objTrialBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1760.0,"y":800.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4E92DC62","properties":[],"isDnd":false,"objectId":{"name":"objTrialBlock","path":"objects/objTrialBlock/objTrialBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1696.0,"y":800.0,},
@@ -234,7 +233,6 @@
     {"name":"inst_16B95B78","path":"rooms/rStartingRoom/rStartingRoom.yy",},
     {"name":"inst_72A5E066","path":"rooms/rStartingRoom/rStartingRoom.yy",},
     {"name":"inst_6948CEFB","path":"rooms/rStartingRoom/rStartingRoom.yy",},
-    {"name":"inst_28073350","path":"rooms/rStartingRoom/rStartingRoom.yy",},
     {"name":"inst_3DD72794","path":"rooms/rStartingRoom/rStartingRoom.yy",},
     {"name":"inst_2F11F1CA","path":"rooms/rStartingRoom/rStartingRoom.yy",},
     {"name":"inst_749D5531","path":"rooms/rStartingRoom/rStartingRoom.yy",},

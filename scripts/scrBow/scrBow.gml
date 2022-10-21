@@ -28,10 +28,9 @@ function scrBow(functionData){
 		state = 0 //Resets ability state back to not executed
 		
 		var arrow = instance_create_depth(x, y, 0, objArrow)
-		var mouseAngle = -arctan2(mouse_y-y, mouse_x-x)
-		arrow.image_angle = mouseAngle
-		arrow.vspeed = -(sin(mouseAngle))*arrowPower
-		arrow.hspeed = (cos(mouseAngle))*arrowPower
+		var mouseAngle = point_direction(x,y,mouse_x,mouse_y);
+		arrow.direction = mouseAngle
+		arrow.speed = arrowPower * 0.5;
 		maxHSpeed = infinity
 	}
 	
