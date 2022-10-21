@@ -3,8 +3,13 @@
   "resourceVersion": "1.0",
   "name": "objArrow",
   "spriteId": {
+<<<<<<< HEAD
     "name": "sprArrow",
     "path": "sprites/sprArrow/sprArrow.yy",
+=======
+    "name": "sprPlayer",
+    "path": "sprites/sprPlayer/sprPlayer.yy",
+>>>>>>> 7bd017eaf3896ec533822475875898b33c455e6e
   },
   "solid": false,
   "visible": true,

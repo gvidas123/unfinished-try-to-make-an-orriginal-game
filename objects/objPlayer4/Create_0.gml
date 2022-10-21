@@ -41,4 +41,21 @@ dashLength = 10; //How many frames the dash happens for
 dashStrength = 20; //How many pixels you are moved per frame
 
 
+ability1Data = ds_list_create()
+ds_list_add(ability1Data, 0)
+ds_list_add(ability1Data, true)
+ds_list_add(ability1Data, false)
+ds_list_add(ability1Data, 0)
+ds_list_add(ability1Data, 0)
+ability1Key = mb_left
+
+ability2Data = ds_list_create()
+ds_list_add(ability2Data, 0)
+ds_list_add(ability2Data, true)
+ds_list_add(ability2Data, false)
+ds_list_add(ability2Data, 0)
+ds_list_add(ability2Data, 0)
+ability2Key = mb_right
+
+
 

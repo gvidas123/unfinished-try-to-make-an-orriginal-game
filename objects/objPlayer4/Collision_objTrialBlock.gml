@@ -19,7 +19,13 @@ if (!place_free(x+hspeed,y)) {
     hspeed = 0;
 	wallCoyote = 8
 	canWallJump = true
-	canAbility1Activate = true
+	if (abilityName1 == "dash") {
+		ability1Data[|1] = true
+	}
+	if (abilityName2 == "dash") {
+		canAbility2Activate = true
+	}
+	
 }
 
 if (!place_free(x,y+vspeed))
@@ -33,7 +39,12 @@ if (!place_free(x,y+vspeed))
 		collisionDirection = "down"
 		coyote = 8
 		canJump = true
-		canAbility1Activate = true
+		if (abilityName1 == "dash") {
+			ability1Data[|1] = true
+		}
+		if (abilityName2 == "dash") {
+			canAbility2Activate = true
+		}
 	}
     vspeed = 0
 }
