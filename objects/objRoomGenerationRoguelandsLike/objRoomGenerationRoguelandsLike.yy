@@ -1,11 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objArrow",
-  "spriteId": {
-    "name": "sprArrow",
-    "path": "sprites/sprArrow/sprArrow.yy",
-  },
+  "name": "objRoomGenerationRoguelandsLike",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -31,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "projectiles",
-    "path": "folders/Objects/projectiles.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
 }
