@@ -50,7 +50,7 @@ for (lineLoop = 0; lineLoop < 2; lineLoop++) {
             yDrawPoint = (yPoints[|j] + yIncrement)
             //show_debug_message(yDrawPoint)
             ds_grid_set(file_grid, xDrawPoint, yDrawPoint, 1)
-            ds_grid_set(file_grid, xDrawPoint, yDrawPoint, "4")
+            ds_grid_set(file_grid, xDrawPoint, yDrawPoint, "path")
 			//instance_create_depth(xDrawPoint*64, yDrawPoint*64, 1, objTrialBlock)
 		}
 		//show_debug_message("-----------------------------")
@@ -72,33 +72,51 @@ var hh = floor(room_height/block_height);
 	ds_grid_set(file_grid, i+1, i, "4");
 }*/
 
-var filenames = ds_list_create();
+
+priorityMap = ds_map_create();
+priorityMap[? "pattern1.csv"] = 2;
+priorityMap[? "pattern2.csv"] = 5;
+
+placementCoeffMap = ds_map_create();
+placementCoeffMap[? "pattern1.csv"] = 2;
+placementCoeffMap[? "pattern2.csv"] = 5;
+
+
+
+
+
+function Pattern(_filename, priorityMap, placementCoeffMap, defaultPriority = 5, defaultPlacementCoeff = 5) constructor
+{
+	pattern = load_csv(_filename);
+	priority = priorityMap[? _filename];
+	if is_undefined(priority) {
+		priority = defaultPriority;
+	}
+	placementCoeff = ds_map_find_value(placementCoeffMap, _filename);
+	if is_undefined(placementCoeff) {
+		placementCoeff = defaultPlacementCoeff;
+	}
+}
+
+
+var patterns = ds_list_create();
 
 for (var filename = file_find_first(working_directory + "*.csv", fa_directory); filename != ""; filename = file_find_next()) {
-	ds_list_add(filenames, filename);
+	ds_list_add(patterns, new Pattern(filename, priorityMap, placementCoeffMap));
 }
 file_find_close();
 
-var pattern_count = ds_list_size(filenames);
+var pattern_count = ds_list_size(patterns);
 
-var patterns = array_create(pattern_count)
-
-for (var ind = 0; ind < pattern_count; ++ind) {
-	patterns[ind] = load_csv(ds_list_find_value(filenames, ind));
-}
-
-// sorting patterns based on size in descinding order (hopefully)
-array_sort(patterns, function(a, b) {
-	return ds_grid_width(b) * ds_grid_height(b) - ds_grid_width(a) * ds_grid_height(a);
-});
+//var patterns = array_create(pattern_count)
 
 
 // TODO: place patterns from the largest to the smallest and optimise overlap checking to edges only
 var number_of_tries = 10000;
 repeat (number_of_tries) {	
-	var pattern = patterns[irandom(pattern_count-1)];
-	var pattern_width = ds_grid_width(pattern)
-	var pattern_height = ds_grid_height(pattern)
+	var pattern = patterns[| irandom(pattern_count-1)];
+	var pattern_width = ds_grid_width(pattern.pattern)
+	var pattern_height = ds_grid_height(pattern.pattern)
 	
 	var x_cord = irandom(ww-pattern_width);
 	var y_cord = irandom(hh-pattern_height);
@@ -107,7 +125,8 @@ repeat (number_of_tries) {
 	var placeable = true;
 	for (var i = 0; i < pattern_width; ++i) {
 		for (var j = 0; j < pattern_height; ++j) {
-			if (file_grid[# i + x_cord, j + y_cord] != "0") {
+			if (file_grid[# i + x_cord, j + y_cord] != "0" 
+				and pattern.pattern[# i, j] != "0") {
 				placeable = false;
 				break;
 			}
@@ -122,7 +141,7 @@ repeat (number_of_tries) {
 	
 	for (var i = 0; i < pattern_width; ++i) {
 		for (var j = 0; j < pattern_height; ++j) {
-			file_grid[# i + x_cord, j + y_cord] = pattern[# i, j];
+			file_grid[# i + x_cord, j + y_cord] = pattern.pattern[# i, j];
 		}
 	}	
 	
@@ -134,7 +153,7 @@ for (var i = 0; i < ww; i++;)
     {
 		var tile = file_grid[# i, j];
 		//show_debug_message(tile)
-		if (tile != 0 && tile != "0" && tile != "4" && tile != "-1") {
+		if (tile != 0 && tile != "0" && tile != "path" && tile != "100") {
 			instance_create_layer(i*block_width+block_width/2, j*block_height+block_height/2, "blocks", global.tileValues[? tile]);
 		}
     }
