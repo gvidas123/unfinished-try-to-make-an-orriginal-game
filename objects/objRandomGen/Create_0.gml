@@ -70,7 +70,7 @@ repeat(floor(gridWidth*gridHeight /2)) {
 		controllerY -= yDir*2;
 	}
 }
-repeat(4) {
+repeat(smoothness) {
 	scrGenSmoothing(grid);
 }
 scrCompletlyRandomSlimeSpawning(grid);

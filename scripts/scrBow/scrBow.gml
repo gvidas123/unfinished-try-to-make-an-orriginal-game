@@ -31,6 +31,7 @@ function scrBow(functionData){
 		var mouseAngle = point_direction(x,y,mouse_x,mouse_y);
 		arrow.direction = mouseAngle
 		arrow.speed = arrowPower * 0.5;
+		arrow.damage += arrowPower;
 		maxHSpeed = infinity
 	}
 	

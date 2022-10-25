@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-scrGlobavariablesInitialize()
-room_goto_next();
-
+instance_destroy();
+with(objArrow) {
+instance_destroy();
+}
 
 
 

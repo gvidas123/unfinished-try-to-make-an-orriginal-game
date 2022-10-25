@@ -3,7 +3,7 @@
 lifetime = 0
 lifeMax = 100
 collisionhappened = 0;
-
+damage = global.arrowBaseDamage;
 
 
 
